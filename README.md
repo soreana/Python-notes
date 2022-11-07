@@ -22,3 +22,12 @@ print( 4**2 ) # prints 16
 ```
 
 
+Functions are objects in Python. So if I print out what's the value of square, then Python is going to tell me that square is a function. So if I run my code, you can see that line 1 prints out function square.
+
+```python
+
+def square():
+    return none
+    
+print(square)
+```
