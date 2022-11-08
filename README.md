@@ -31,3 +31,8 @@ def square():
     
 print(square) # outputs <function square>
 ```
+
+
+type function shows the type of the variable.
+
+Use """ to split string in multiple lines.
