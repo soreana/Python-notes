@@ -35,4 +35,24 @@ print(square) # outputs <function square>
 
 type function shows the type of the variable.
 
+```python
+print(type("Hello, World!")) # prints <class 'str'>
+print(type(20)) # prints <class 'int'>
+print(type(3.2)) # prints <class 'float'>
+```
+
 Use """ to split string in multiple lines.
+
+```python
+print("""This message will span
+several lines
+of the text.""")
+
+
+When python casts float to int, it drops numbers after the dot. For example:
+
+```python
+int(3.999) # is 3
+int(3.0) # is 3
+int(-3.9999) # is -3
+```
