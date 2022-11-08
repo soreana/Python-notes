@@ -29,5 +29,5 @@ Functions are objects in Python. So if I print out what's the value of square, t
 def square():
     return none
     
-print(square)
+print(square) # outputs <function square>
 ```
