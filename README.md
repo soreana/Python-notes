@@ -1,7 +1,7 @@
 # Python-notes
 
 
-In python result of the / is float !!!!!!!!!!!!!!
+In python result of the `/` is float !!!!!!!!!!!!!!
 
 The truncated division operator, //, also works on floating point numbers. It truncates to the nearest integer, but still produces a floating point result. Thus 7.0 // 3.0 is 2.0.
 
@@ -62,4 +62,33 @@ Get input:
 ```python
 n = input("Please enter your name: ") # It always reads string. you should cast it if you want to convert it to another type.
 print("Hello", n)
+```
+
+For loop examples:
+```python
+for _ in range(3):
+    ...
+```
+
+How import works
+
+```python
+import random
+
+prob = random.random()
+print(prob)
+
+diceThrow = random.randrange(1,7)       # return an int, one of 1,2,3,4,5,6
+print(diceThrow)
+```
+
+```python
+from random import random, randrange
+
+prob = random()
+print(prob)
+
+diceThrow = randrange(1,7)       # return an int, one of 1,2,3,4,5,6
+print(diceThrow)
+
 ```
