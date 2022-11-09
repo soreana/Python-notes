@@ -56,3 +56,10 @@ int(3.999) # is 3
 int(3.0) # is 3
 int(-3.9999) # is -3
 ```
+
+
+Get input:
+```python
+n = input("Please enter your name: ") # It always reads string. you should cast it if you want to convert it to another type.
+print("Hello", n)
+```
