@@ -92,3 +92,15 @@ diceThrow = randrange(1,7)       # return an int, one of 1,2,3,4,5,6
 print(diceThrow)
 
 ```
+
+
+Tuple vs List: 
+Tuple is immutable, but the list is not.
+
+```python
+t = (5,)
+print(type(t)) # prints <class 'tuple'>
+
+l = ["hello", 2.0, 5, [10, 20]]
+print(type(l)) # prints <class 'list'>
+```
