@@ -165,3 +165,28 @@ seasons = ["winter", "spring", "summer", "fall"]
 
 print(seasons.index("autumn"))  #Error!
 ```
+
+Splitting:
+
+```python
+song = "The rain in Spain..."
+wds = song.split() # it uses space as splitter by default.
+
+song = "The rain in Spain..."
+wds = song.split('ai') # it uses ai as splitter.
+```
+
+Joining:
+
+```python
+wds = ["red", "blue", "green"]
+glue = ';'
+s = glue.join(wds) 
+print(s) # prints red;blue;green
+print(wds) # join doesn't have any effect one the wds
+
+print("".join(wds)) # prints redbluegreen
+
+```
+
+
