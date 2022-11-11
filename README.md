@@ -66,7 +66,13 @@ print("Hello", n)
 
 For loop examples:
 ```python
-for _ in range(3):
+for _ in range(3): # runs three time
+    ...
+    
+for i in range(5): # range returnes a sequence of [0, 1, 2, 3, 4] (last item is exclusive)
+    ...
+
+for i in range(1, 5): # now it returnes a sequence of [1, 2, 3, 4]
     ...
 ```
 
