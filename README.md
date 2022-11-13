@@ -248,3 +248,26 @@ julia = ("X", "Y")
 julia[0] = 'X'  # TypeError: 'tuple' object does not support item assignment
 ```
 
+Refrences
+
+```python
+a = "banana"
+b = "banana"
+
+print(a is b) # prints true
+
+print(id(a)) # prints 2
+print(id(b)) # prints 2
+
+a = [81,82,83]
+b = [81,82,83]
+
+print(a is b) # prints False
+
+print(a == b) # prints True
+
+print(id(a)) # prints 3
+print(id(b)) # prints 4
+
+
+```
