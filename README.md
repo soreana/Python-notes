@@ -205,7 +205,46 @@ print('' in 'apple') # returns True
 print('x' not in 'apple') # returns True
 print("a" in ["a", "b", "c", "d"]) # returns True
 print(9 in [3, 2, 9, 10, 9.0]) # returns True
-print('wow' not in ['gee wiz', 'gosh golly', 'wow', 'amazing']) # returns True
-
-
+print('wow' not in ['gee wiz', 'gosh golly', 'wow', 'amazing']) # returns Tru
 ```
+
+Mutablity:
+
+```python
+alist = ['a', 'b', 'c', 'd', 'e', 'f']
+alist[1:3] = ['x', 'y']
+print(alist) # prints ['a', 'x', 'y', 'd', 'e', 'f']
+
+alist[1:3] = [] # This assignment deletes elements 1 and 2 but it is better to use the del statement *1
+print(alist) # prints ['a', 'd', 'e', 'f']
+
+alist = ['a', 'd', 'f']
+alist[1:1] = ['b', 'c']
+print(alist) # prints ['a', 'b', 'c', 'd', 'f']
+
+alist[4:4] = ['e']
+print(alist) # prints ['a', 'b', 'c', 'd', 'e', 'f']
+
+*1
+a = ['one', 'two', 'three']
+del a[1]
+print(a) # prints ['one', 'three']
+
+alist = ['a', 'b', 'c', 'd', 'e', 'f']
+del alist[1:5]
+print(alist) # prints ['a', 'f']
+```
+
+But Strings are immutable:
+
+```python
+greeting = "Hello, world!"
+greeting[0] = 'J' # Results TypeError: 'str' does not support item assignment on line 2
+```
+
+Tuples are also immutable:
+```python
+julia = ("X", "Y")
+julia[0] = 'X'  # TypeError: 'tuple' object does not support item assignment
+```
+
