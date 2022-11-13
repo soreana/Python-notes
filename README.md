@@ -39,6 +39,7 @@ type function shows the type of the variable.
 print(type("Hello, World!")) # prints <class 'str'>
 print(type(20)) # prints <class 'int'>
 print(type(3.2)) # prints <class 'float'>
+print(type(True)) # prints <class 'bool'>
 ```
 
 Use """ to split string in multiple lines.
@@ -195,4 +196,16 @@ print("".join(wds)) # prints redbluegreen
 
 ```
 
+In operator:
 
+```python
+print('p' in 'apple') # returns True
+print('' in 'a') # returns True
+print('' in 'apple') # returns True
+print('x' not in 'apple') # returns True
+print("a" in ["a", "b", "c", "d"]) # returns True
+print(9 in [3, 2, 9, 10, 9.0]) # returns True
+print('wow' not in ['gee wiz', 'gosh golly', 'wow', 'amazing']) # returns True
+
+
+```
