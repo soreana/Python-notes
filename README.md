@@ -269,5 +269,12 @@ print(a == b) # prints True
 print(id(a)) # prints 3
 print(id(b)) # prints 4
 
+```
 
+Cloning a List:
+The slice operator, always grabs some part of a list, and **makes a new list** using those items that have been grabbed. So, if we execute the following code, then we have a clone of a.
+
+```python
+a = [1, 2, 3, 4, 5]
+b = a[:] # Now, b is the clone of the a
 ```
