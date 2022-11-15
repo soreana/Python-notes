@@ -278,3 +278,38 @@ The slice operator, always grabs some part of a list, and **makes a new list** u
 a = [1, 2, 3, 4, 5]
 b = a[:] # Now, b is the clone of the a
 ```
+
+Mutating methods:
+
+```python
+mylist = []
+mylist.append(5)
+mylist.append(27)
+mylist.append(3)
+mylist.append(12)
+print(mylist) # prints [5, 27, 3, 12]
+
+mylist.insert(1, 12)
+print(mylist) # prints [5, 12, 27, 3, 12]
+print(mylist.count(12)) # prints 2
+
+print(mylist.index(3)) # prints 3
+print(mylist.count(5)) # prints 1
+
+mylist.reverse() # it is in-place
+print(mylist) # prints [12, 3, 27, 12, 5]
+
+mylist.sort() # it is in-place
+print(mylist) # prints [3, 5, 12, 12, 27]
+
+mylist.remove(5) # removes 5 not an object at index 5
+print(mylist) # prints [3, 12, 12, 27]
+
+lastitem = mylist.pop() 
+print(lastitem) # prints 27
+print(mylist) # prints [3, 12, 12]
+```
+
+**Important:** Concatenation with + operator creates a new list, but the append function add the element to the end of the array. It doesn't create a new list.
+
+The fucking Python language doesn't do the same with (arr) + (arr) and (arr) += (arr). In case of (arr) + (arr) it concatenate the arrays and creates new object. But in (arr) += (arr) it append the second array to the first one. There isn't any new object.
