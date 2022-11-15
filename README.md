@@ -48,7 +48,7 @@ Use """ to split string in multiple lines.
 print("""This message will span
 several lines
 of the text.""")
-
+```
 
 When python casts float to int, it drops numbers after the dot. For example:
 
