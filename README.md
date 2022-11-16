@@ -313,3 +313,41 @@ print(mylist) # prints [3, 12, 12]
 **Important:** Concatenation with + operator creates a new list, but the append function add the element to the end of the array. It doesn't create a new list.
 
 The fucking Python language doesn't do the same with (arr) + (arr) and (arr) += (arr). In case of (arr) + (arr) it concatenate the arrays and creates new object. But in (arr) += (arr) it append the second array to the first one. There isn't any new object.
+
+String mutation:
+
+It doesn't have any effect on the String, it always generates new string.
+
+```python
+ss = "Hello, World"
+print(ss.upper()) # prints HELLO, WORLD
+
+tt = ss.lower()
+print(tt) # prints hello, world
+print(ss) # prints Hello, world
+
+
+ss = "    Hello, World    "
+
+els = ss.count("l")
+print(els)
+
+print("***"+ss.strip()+"***")
+
+news = ss.replace("o", "***")
+print(news)
+```
+
+String format:
+
+```python
+person = "Samar"
+score = 20
+print('Hello {}. Your score is {}.".format(name, score))
+
+origPrice = 80.99
+discount = 33.30
+newPrice = (1 - discount/100)*origPrice
+calculation = '${:.2f} discounted by {}% is ${:.2f}.'.format(origPrice, discount, newPrice)
+
+```
