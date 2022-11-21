@@ -351,3 +351,66 @@ newPrice = (1 - discount/100)*origPrice
 calculation = '${:.2f} discounted by {}% is ${:.2f}.'.format(origPrice, discount, newPrice)
 
 ```
+
+# Files:
+
+Open/close file:
+
+```python
+fileRef = open('school_prompt2.txt','r')
+fileRef.close()
+```
+
+| Method Name | Use |  Explanation|
+|:-----------:|:---:|:-----------:|
+| write | filevar.write(astring) | Add a string to the end of the file. filevar must refer to a file that has been opened for writing.|
+read(n)|filevar.read()|Read and return a string of n characters, or the entire file as a single string if n is not provided.|
+|readline(n)|filevar.readline()| Read and return the next line of the file with all text up to and including the newline character. If n is provided as a parameter, then only n characters will be returned if the line is longer than n. Note the parameter n is not supported in the browser version of Python, and in fact is rarely used in practice, you can safely ignore it.|
+|readlines(n)| filevar.readlines()| Returns a list of strings, each representing a single line of the file. If n is not provided then all lines of the file are returned. If n is provided then n characters are read but n is rounded up so that an entire line is returned. Note Like readline readlines ignores the parameter n in the browser.
+
+File iteration: 
+
+
+```python
+f = open("file.txt", "r")
+
+# iterating over characters
+for ch in f.read():
+    ...
+
+# iterating over lines
+for li in f.readlines():
+    ...
+   
+# iterating over lines using the file ref (prefered)
+for li in f:
+    ...
+
+f.close()
+```
+
+Writing a files:
+
+```python
+f = open("file.txt", "w") # equivalents to `with open("file.txt", "w") as f`
+
+for number in range(1, 13):
+    square = number * number
+    f.write(str(square) + "\n") # Note-1: we have to add the \n explicitly, Note-2: We also need to pass a String in contrast to the print
+
+f.close()
+```
+
+With keyword:
+It is the same for reading (`open` with `r` option) and writing (following example):
+
+```python
+
+# These are the same
+f = open("file.txt", "w")
+...
+f.close()
+
+with open("file.txt", "w") as f:
+    ...
+```
