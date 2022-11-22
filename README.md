@@ -426,4 +426,8 @@ print(pets["dog"]) # prints 6
 pets["mouse"] = 3
 
 print(pets["mouse"]) # prints 3
+
+del pets["elephant"] # removes elephant
+
+print(len(pets)) # prints 3
 ```
