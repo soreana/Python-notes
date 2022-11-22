@@ -414,3 +414,16 @@ f.close()
 with open("file.txt", "w") as f:
     ...
 ```
+
+Dictionaries:
+
+```python
+emptyDic = {}
+pets = {"cat":12, "dog":6, "elephant":23}
+
+print(pets["dog"]) # prints 6
+
+pets["mouse"] = 3
+
+print(pets["mouse"]) # prints 3
+```
