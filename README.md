@@ -431,3 +431,47 @@ del pets["elephant"] # removes elephant
 
 print(len(pets)) # prints 3
 ```
+
+Some useful methods:
+
+| Method | Parameters | Description |
+|:-------|:-----------|:------------|
+| keys   | none       | Returns a view of the keys in the dictionary |
+| values | none       | Returns a view of the values in the dictionary |
+| items  | none       | Returns a view of the key-value pairs in the dictionary |
+| get    | key        | Returns the value associated with key; None otherwise |
+| get    | key,alt    | Returns the value associated with key; alt otherwise |
+
+```python
+inventory = {'apples': 430, 'bananas': 312, 'pears': 217, 'oranges': 525}
+
+for akey in inventory.keys():
+    ...
+    
+for akey in sorted(inventory.keys()):
+    ...
+
+# Or simply
+for k in inventory:
+    ...
+
+# iterate over the values
+for v in inventory.values():
+    ...
+
+# iterate over both key and values
+for k, v in inventory.items():
+    ...
+
+# Check existance
+if 'bananas' in inventory:
+    print(inventory['bananas'])
+
+# Get the value safely inventory['cherries'] throws an error cause the cherries key doesn't exist in the inventory but get returns None
+print(inventory.get("apples"))
+print(inventory.get("cherries"))
+
+print(inventory.get("cherries",0))
+ks = list(inventory.keys()) # Keys doesn't return the keys as a list, we should convert it using the list() conversion function.
+
+```
