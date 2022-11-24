@@ -475,3 +475,26 @@ print(inventory.get("cherries",0))
 ks = list(inventory.keys()) # Keys doesn't return the keys as a list, we should convert it using the list() conversion function.
 
 ```
+
+Functions:
+
+if you don't return anyting from the function, the return value would be `None`.
+
+In the following code, adding results in an error but multipying not.
+```python
+x = 9
+
+# has error
+def adding():
+    x+=1
+    print(x)
+
+# No error
+def multipying():
+    global x
+    x+=1
+    print(x)
+
+adding()
+multipying()
+```
