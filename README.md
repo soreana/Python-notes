@@ -498,3 +498,25 @@ def multipying():
 adding()
 multipying()
 ```
+
+Tuple boxing/unboxing
+
+```python
+julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
+# or equivalently
+julia = "Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia"
+print(julia[4])
+```
+
+Use tuple boxing/unboxing as a way to return two values from a function:
+
+```python
+
+def circleInfo(r):
+    """ Return (circumference, area) of a circle of radius r """
+    c = 2 * 3.14159 * r
+    a = 3.14159 * r * r
+    return c, a
+
+circumference, area = circleInfo(10)
+```
