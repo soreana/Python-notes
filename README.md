@@ -503,12 +503,40 @@ Tuple boxing/unboxing
 
 ```python
 julia = ("Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia")
-# or equivalently
+
+# or equivalently (implicit tuple boxing)
 julia = "Julia", "Roberts", 1967, "Duplicity", 2009, "Actress", "Atlanta, Georgia"
 print(julia[4])
+
+# (implicit tuple unboxing)
+name, surname, birth_year, movie, movie_year, profession, birth_place = julia
+
+(a, b, c, d) = (1, 2, 3) # ValueError: need more than 3 values to unpack
+
+# Swapping values
+a = 1
+b = 2
+(a, b) = (b, a)
 ```
 
-Use tuple boxing/unboxing as a way to return two values from a function:
+Use tuple boxing/unboxing in for loop
+
+```python
+fruits = ['apple', 'pear', 'apricot', 'cherry', 'peach']
+
+# the following three fors output the same result
+for n in range(len(fruits)):
+    print(n, fruits[n])
+    
+for item in enumerate(fruits):
+    print(item[0], item[1])
+
+for idx, fruit in enumerate(fruits):
+    print(idx, fruit)
+```
+
+
+Use tuple boxing/unboxing with functions:
 
 ```python
 
@@ -519,4 +547,12 @@ def circleInfo(r):
     return c, a
 
 circumference, area = circleInfo(10)
+
+def add(x, y):
+    return x + y
+
+print(add(3, 4))
+z = (5, 4)
+print(add(*z)) # this line will cause the values to be unpacked
+print(add(z)) # this line causes an error
 ```
