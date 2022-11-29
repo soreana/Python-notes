@@ -344,6 +344,9 @@ String format:
 person = "Samar"
 score = 20
 print('Hello {}. Your score is {}.".format(name, score))
+print('Hello {nm}. Your score is {s1}.".format(s1=score, nm=name))
+print('Hello {0}. Your score is {1}. Bye {0}!".format(name, score))
+
 
 origPrice = 80.99
 discount = 33.30
@@ -555,4 +558,29 @@ print(add(3, 4))
 z = (5, 4)
 print(add(*z)) # this line will cause the values to be unpacked
 print(add(z)) # this line causes an error
+```
+
+Optional Parameters
+Python acts weired with the optional parameters
+
+```python
+initial = 7
+# Default values are only evaluated when we declare the function.
+# If we change the initial value it doesn't have any effect on f function
+def f(x, y =3, z=initial):
+    print("x, y, z, are: " + str(x) + ", " + str(y) + ", " + str(z))
+
+initial = 10
+f(2) # Prints "x, y, z, are: 2, 3, 7" not "x, y, z, are: 2, 3, 10"
+
+def f(a, L=[]):
+    L.append(a)
+    return L
+
+print(f(1)) # Prints [1]
+print(f(2)) # Prints [1, 2]
+print(f(3)) # Prints [1, 2, 3]
+print(f(4, ["Hello"])) # Prints ['Hello', 4]
+print(f(5, ["Hello"])) # Prints ['Hello', 5]
+
 ```
