@@ -625,4 +625,43 @@ def absolute(x):
 
 L4 = sorted(L1, key=absolute) # L4 is [1, -2, 3, 4, 7]
 
+# Dictionaries
+d = {"F": 10, 'T': 20, 'C': 6, "G": 1, 'H': 2, 'L': 14}
+
+D1 = sorted(d.keys()) # Based on the key
+D2 = sorted(d, key= lambda k: d[k]) # Based on the values
+
+# Tuples
+# For a sequence of tuples, the default sort order is based on the default sort order for the first elements
+# of the tuples, with ties being broken by the second elements, and then third elements if necessary, etc.
+
+tups = [('A', 3, 2),
+        ('C', 1, 4),
+        ('B', 3, 1),
+        ('A', 2, 4),
+        ('C', 1, 2)]
+        
+for tup in sorted(tups):
+    print(tup)
+# prints
+# ('A', 2, 4)
+# ('A', 3, 2)
+# ('B', 3, 1)
+# ('C', 1, 2)
+# ('C', 1, 4)
+
+# We can use this trick to break ties
+
+fruits = ['peach', 'kiwi', 'apple', 'blueberry', 'papaya', 'mango', 'pear']
+new_order = sorted(fruits, key=lambda fruit_name: (len(fruit_name), fruit_name))
+for fruit in new_order:
+    print(fruit)
+# prints
+# kiwi
+# pear
+# apple
+# mango
+# peach
+# papaya
+# blueberry
 ```
