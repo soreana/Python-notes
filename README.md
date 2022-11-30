@@ -584,3 +584,18 @@ print(f(4, ["Hello"])) # Prints ['Hello', 4]
 print(f(5, ["Hello"])) # Prints ['Hello', 5]
 
 ```
+
+Lambda functions:
+
+```python
+def f(x):
+    return x - 1
+
+print(f) # prints <function f>
+print(type(f)) # prints <class 'function'>
+print(f(3)) # prints 2
+
+print(lambda x: x-2) # prints <function <lambda>>
+print(type(lambda x: x-2)) # prints <class 'function'>
+print((lambda x: x-2)(6)) # prints 6
+```
