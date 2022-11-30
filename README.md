@@ -599,3 +599,30 @@ print(lambda x: x-2) # prints <function <lambda>>
 print(type(lambda x: x-2)) # prints <class 'function'>
 print((lambda x: x-2)(6)) # prints 6
 ```
+
+Sorting a list
+
+```python
+L1 = [1, 7, 4, -2, 3]
+
+# Option one
+L1.sort()
+print(L1) # prints [-2, 1, 3, 4, 7]
+
+# Options two (prefered)
+L2 = sorted(L1)
+
+# Reversed
+L3 = sorted(L1, reverse=True ) # L3 is [7, 4, 3, 1, -2]
+
+# With key
+
+def absolute(x):
+    if x >= 0:
+        return x
+    else:
+        return -x
+
+L4 = sorted(L1, key=absolute) # L4 is [1, -2, 3, 4, 7]
+
+```
