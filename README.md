@@ -336,6 +336,10 @@ print("***"+ss.strip()+"***")
 
 news = ss.replace("o", "***")
 print(news)
+
+# Checkes if the letter is alpha or not
+letter = 'a'
+letter.isalpha() # returns True
 ```
 
 String format:
