@@ -347,9 +347,9 @@ String format:
 ```python
 person = "Samar"
 score = 20
-print('Hello {}. Your score is {}.".format(name, score))
-print('Hello {nm}. Your score is {s1}.".format(s1=score, nm=name))
-print('Hello {0}. Your score is {1}. Bye {0}!".format(name, score))
+print('Hello {}. Your score is {}.'.format(name, score))
+print('Hello {nm}. Your score is {s1}.'.format(s1=score, nm=name))
+print('Hello {0}. Your score is {1}. Bye {0}!'.format(name, score))
 
 
 origPrice = 80.99
