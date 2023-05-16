@@ -669,3 +669,57 @@ for fruit in new_order:
 # papaya
 # blueberry
 ```
+
+# Utility functions:
+
+```python
+def octal_to_string(octal):
+    result = ""
+    value_letters = [(4,"r"),(2,"w"),(1,"x")]
+    # Iterate over each of the digits in octal
+    for digit in [int(n) for n in str(octal)]:
+        # Check for each of the permissions values
+        for value, letter in value_letters:
+            if digit >= value:
+                result += letter
+                digit -= value
+            else:
+                result += '-'
+    return result
+
+print(octal_to_string(755)) # Should be rwxr-xr-x
+print(octal_to_string(644)) # Should be rw-r--r--
+print(octal_to_string(750)) # Should be rwxr-x---
+print(octal_to_string(600)) # Should be rw-------
+```
+
+```python
+def perm_to_num(symbolic):
+    '''
+    Convert symbolic permission notation to numeric notation.
+    '''
+    perms = {
+            '---': '0',
+            '--x': '1',
+            '-w-': '2',
+            '-wx': '3',
+            'r--': '4',
+            'r-x': '5',
+            'rw-': '6',
+            'rwx': '7'
+        }
+
+    # Trim Lead If It Exists
+    if len(symbolic) == 10:
+        symbolic = symbolic[1:]
+
+    # Parse Symbolic to Numeric
+    x = (symbolic[:-6], symbolic[3:-3], symbolic[6:])
+    numeric = perms[x[0]] + perms[x[1]] + perms[x[2]]
+    return numeric
+
+print(perm_to_num('rwxr-xr-x')) # Shoule be 755
+print(perm_to_num('rw-r--r--')) # Shoule be 644
+print(perm_to_num('rwxr-x---')) # Shoule be 750
+print(perm_to_num('rw-------')) # Shoule be 600
+```
